@@ -16,8 +16,14 @@ def selection_sort( arr ):
 
 
 # TO-DO:  implement the Bubble Sort function below
-def bubble_sort( arr ):
-
+def bubble_sort(arr):
+    swapping = True
+    while swapping:
+        swapping = False  # If no swap, loop will stop after swappig become false
+        for j in range(len(arr)-1):
+            if arr[j] > arr[j+1]:  # compare if current element is greater than its neighbor in right
+                arr[j], arr[j+1] = arr[j+1], arr[j]  # Swap if yes
+                swapping =  True    # Swap Happened
     return arr
 
 
